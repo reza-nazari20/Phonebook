@@ -44,7 +44,6 @@ E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\bin\Debug\net8.0-windows\DAL.d
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\bin\Debug\net8.0-windows\BLL.pdb
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\bin\Debug\net8.0-windows\DAL.pdb
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.csproj.AssemblyReference.cache
-E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.Form1.resources
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.csproj.GenerateResource.cache
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.GeneratedMSBuildEditorConfig.editorconfig
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.AssemblyInfoInputs.cache
@@ -57,3 +56,4 @@ E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_wi
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.genruntimeconfig.cache
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\ref\UI_winform.dll
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.sourcelink.json
+E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.Forms.frmMain.resources
