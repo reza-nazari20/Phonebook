@@ -59,3 +59,4 @@ E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_wi
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.Forms.frmMain.resources
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.Forms.frmDetailContact.resources
 E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.Forms.frmAddContact.resources
+E:\Practice\Phonebook\Phonebook_N-tier\UI_winform\obj\Debug\net8.0-windows\UI_winform.Forms.frmEditContact.resources

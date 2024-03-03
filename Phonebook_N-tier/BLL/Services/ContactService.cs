@@ -155,5 +155,32 @@ namespace BLL.Services
                 Message=$"مخاطب {contact.Name} {contact.Lastname} با موفقیت ذخیره شد",
             };
         }
+
+        public ResultDto EditeContact(EditeContactDto editeContactDto)
+        {
+            var contact = database.Contacts.Find(editeContactDto.Id);
+            if (contact == null)
+            {
+                return new ResultDto()
+                {
+                    IsSuccess=false,
+                    Message="مخاطب یافت نشد",
+                };
+            }
+
+            contact.Company = editeContactDto.Company;
+            contact.Name = editeContactDto.Name;
+            contact.Lastname=editeContactDto.Lastname;
+            contact.PhoneNumber = editeContactDto.PhoneNumber;
+            contact.Description = editeContactDto.Description;
+
+            database.SaveChanges();
+
+            return new ResultDto()
+            {
+                IsSuccess=true,
+                Message="مخاطب یافت شد",
+            };
+        }
     }
 }

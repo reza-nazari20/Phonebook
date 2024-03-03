@@ -35,6 +35,7 @@
             btnDetail = new Button();
             btnAddnewContact = new Button();
             label1 = new Label();
+            btnEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 270);
+            dataGridView1.Location = new Point(0, 340);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(544, 368);
@@ -52,7 +53,7 @@
             // btnsearch
             // 
             btnsearch.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btnsearch.Location = new Point(12, 152);
+            btnsearch.Location = new Point(12, 187);
             btnsearch.Name = "btnsearch";
             btnsearch.Size = new Size(265, 53);
             btnsearch.TabIndex = 1;
@@ -62,7 +63,7 @@
             // 
             // txtsearchkey
             // 
-            txtsearchkey.Location = new Point(12, 91);
+            txtsearchkey.Location = new Point(12, 126);
             txtsearchkey.Name = "txtsearchkey";
             txtsearchkey.Size = new Size(265, 37);
             txtsearchkey.TabIndex = 2;
@@ -70,7 +71,7 @@
             // btndelete
             // 
             btndelete.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btndelete.Location = new Point(352, 110);
+            btndelete.Location = new Point(352, 164);
             btndelete.Name = "btndelete";
             btndelete.Size = new Size(180, 53);
             btndelete.TabIndex = 3;
@@ -81,7 +82,7 @@
             // btnDetail
             // 
             btnDetail.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btnDetail.Location = new Point(352, 190);
+            btnDetail.Location = new Point(352, 239);
             btnDetail.Name = "btnDetail";
             btnDetail.Size = new Size(180, 53);
             btnDetail.TabIndex = 4;
@@ -104,17 +105,29 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("B Zar", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            label1.Location = new Point(106, 27);
+            label1.Location = new Point(106, 62);
             label1.Name = "label1";
             label1.Size = new Size(92, 47);
             label1.TabIndex = 6;
             label1.Text = "جستوجو";
             // 
+            // btnEdit
+            // 
+            btnEdit.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            btnEdit.Location = new Point(352, 89);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(180, 53);
+            btnEdit.TabIndex = 7;
+            btnEdit.Text = "ویرایش";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(544, 638);
+            ClientSize = new Size(544, 708);
+            Controls.Add(btnEdit);
             Controls.Add(label1);
             Controls.Add(btnAddnewContact);
             Controls.Add(btnDetail);
@@ -144,5 +157,6 @@
         private Button btnDetail;
         private Button btnAddnewContact;
         private Label label1;
+        private Button btnEdit;
     }
 }
