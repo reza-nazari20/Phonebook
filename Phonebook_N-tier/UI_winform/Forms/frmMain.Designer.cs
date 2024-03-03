@@ -33,6 +33,8 @@
             txtsearchkey = new TextBox();
             btndelete = new Button();
             btnDetail = new Button();
+            btnAddnewContact = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -50,9 +52,9 @@
             // btnsearch
             // 
             btnsearch.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btnsearch.Location = new Point(403, 21);
+            btnsearch.Location = new Point(12, 152);
             btnsearch.Name = "btnsearch";
-            btnsearch.Size = new Size(129, 53);
+            btnsearch.Size = new Size(265, 53);
             btnsearch.TabIndex = 1;
             btnsearch.Text = "جستوجو";
             btnsearch.UseVisualStyleBackColor = true;
@@ -60,7 +62,7 @@
             // 
             // txtsearchkey
             // 
-            txtsearchkey.Location = new Point(42, 30);
+            txtsearchkey.Location = new Point(12, 91);
             txtsearchkey.Name = "txtsearchkey";
             txtsearchkey.Size = new Size(265, 37);
             txtsearchkey.TabIndex = 2;
@@ -68,9 +70,9 @@
             // btndelete
             // 
             btndelete.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btndelete.Location = new Point(403, 110);
+            btndelete.Location = new Point(352, 110);
             btndelete.Name = "btndelete";
-            btndelete.Size = new Size(129, 53);
+            btndelete.Size = new Size(180, 53);
             btndelete.TabIndex = 3;
             btndelete.Text = "حذف";
             btndelete.UseVisualStyleBackColor = true;
@@ -79,19 +81,42 @@
             // btnDetail
             // 
             btnDetail.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btnDetail.Location = new Point(403, 190);
+            btnDetail.Location = new Point(352, 190);
             btnDetail.Name = "btnDetail";
-            btnDetail.Size = new Size(129, 53);
+            btnDetail.Size = new Size(180, 53);
             btnDetail.TabIndex = 4;
             btnDetail.Text = "نمایش جزئیات";
             btnDetail.UseVisualStyleBackColor = true;
             btnDetail.Click += btnDetail_Click;
+            // 
+            // btnAddnewContact
+            // 
+            btnAddnewContact.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            btnAddnewContact.Location = new Point(352, 21);
+            btnAddnewContact.Name = "btnAddnewContact";
+            btnAddnewContact.Size = new Size(180, 53);
+            btnAddnewContact.TabIndex = 5;
+            btnAddnewContact.Text = "اضافه کردن مخاطب";
+            btnAddnewContact.UseVisualStyleBackColor = true;
+            btnAddnewContact.Click += btnAddnewContact_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("B Zar", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            label1.Location = new Point(106, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 47);
+            label1.TabIndex = 6;
+            label1.Text = "جستوجو";
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(544, 638);
+            Controls.Add(label1);
+            Controls.Add(btnAddnewContact);
             Controls.Add(btnDetail);
             Controls.Add(btndelete);
             Controls.Add(txtsearchkey);
@@ -117,5 +142,7 @@
         private TextBox txtsearchkey;
         private Button btndelete;
         private Button btnDetail;
+        private Button btnAddnewContact;
+        private Label label1;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BLL.Dto;
 using DAL.DataBase;
+using DAL.Entities;
 
 
 namespace BLL.Services
@@ -103,6 +104,55 @@ namespace BLL.Services
                 IsSuccess = true,
                 Data = data,
                 Message = null,
+            };
+        }
+
+        public ResultDto AddNewContact(AddNewContactDto newContact)
+        {
+            if (string.IsNullOrEmpty(newContact.PhoneNumber))
+            {
+                return new ResultDto()
+                {
+                    IsSuccess=false,
+                    Message="وارد کردن شماره تلفن اجباری است",
+                };
+            }
+
+            if (string.IsNullOrEmpty(newContact.Name))
+            {
+                return new ResultDto()
+                {
+                    IsSuccess=false,
+                    Message="وارد کردن نام اجباری است",
+                };
+            }
+
+            if (string.IsNullOrEmpty(newContact.Lastname))
+            {
+                return new ResultDto()
+                {
+                    IsSuccess=false,
+                    Message="وارد کردن نام خانوادگی اجباری است",
+                };
+            }
+
+            Contact contact = new Contact()
+            {
+                Company=newContact.Company,
+                CreateAt=DateTime.Now,
+                Description=newContact.Description,
+                Name=newContact.Name,
+                Lastname=newContact.Lastname,
+                PhoneNumber=newContact.PhoneNumber,
+            };
+
+            database.Contacts.Add(contact);
+            database.SaveChanges();
+
+            return new ResultDto
+            {
+                IsSuccess=true,
+                Message=$"مخاطب {contact.Name} {contact.Lastname} با موفقیت ذخیره شد",
             };
         }
     }

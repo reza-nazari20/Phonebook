@@ -77,5 +77,12 @@ namespace UI_winform.Forms
         {
             ShowDetali();
         }
+
+        private void btnAddnewContact_Click(object sender, EventArgs e)
+        {
+            frmAddContact frmAddContact = new frmAddContact();
+            frmAddContact.ShowDialog();
+            frmMain_Load(null,null);
+        }
     }
 }
