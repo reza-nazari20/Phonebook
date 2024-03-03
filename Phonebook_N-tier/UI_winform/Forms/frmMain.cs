@@ -30,8 +30,8 @@ namespace UI_winform.Forms
             dataGridView1.Columns[1].HeaderText = "نام مخاطب";
             dataGridView1.Columns[2].HeaderText = "شماره تلفن";
 
-            dataGridView1.Columns[1].Width = 165;
-            dataGridView1.Columns[2].Width = 164;
+            dataGridView1.Columns[1].Width = 183;
+            dataGridView1.Columns[2].Width = 183;
         }
 
         private void btnsearch_Click(object sender, EventArgs e)
@@ -59,6 +59,23 @@ namespace UI_winform.Forms
             {
                 MessageBox.Show(result.Message, "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            ShowDetali();
+        }
+
+        private void ShowDetali()
+        {
+            var Id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            frmDetailContact frmDetailContact = new frmDetailContact(Id);
+            frmDetailContact.ShowDialog();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            ShowDetali();
         }
     }
 }

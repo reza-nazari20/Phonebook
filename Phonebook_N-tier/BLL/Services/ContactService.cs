@@ -73,5 +73,37 @@ namespace BLL.Services
                 Message="مخاطب با موفقیت حذف نشد"
             };
         }
+
+        public ResultDto<ContactDetailDto> GetContactDetail(int Id)
+        {
+            var contact = database.Contacts.Find(Id);
+            if (contact == null)
+            {
+                return new ResultDto<ContactDetailDto>()
+                {
+                    IsSuccess=false,
+                    Message="مخاطب پیدا نشد",
+                    Data=null,
+                };
+            }
+
+            var data = new ContactDetailDto()
+            {
+                Company=contact.Company,
+                CreateAt=contact.CreateAt,
+                Description=contact.Description,
+                ID=contact.ID,
+                Lastname=contact.Lastname,
+                Name=contact.Name,
+                PhoneNumber=contact.PhoneNumber,
+            };
+
+            return new ResultDto<ContactDetailDto>()
+            {
+                IsSuccess = true,
+                Data = data,
+                Message = null,
+            };
+        }
     }
 }

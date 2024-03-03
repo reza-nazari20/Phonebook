@@ -12,4 +12,13 @@ namespace BLL.Dto
 
         public required string Message { get; set; }
     }
+
+    public class ResultDto<T>
+    {
+        public bool IsSuccess { get; set; }
+
+        public required string Message { get; set; }
+
+        public required T Data { get; set; }
+    }
 }

@@ -32,6 +32,7 @@
             btnsearch = new Button();
             txtsearchkey = new TextBox();
             btndelete = new Button();
+            btnDetail = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -39,16 +40,17 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 214);
+            dataGridView1.Location = new Point(0, 270);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(507, 356);
+            dataGridView1.Size = new Size(544, 368);
             dataGridView1.TabIndex = 0;
+            dataGridView1.DoubleClick += dataGridView1_DoubleClick;
             // 
             // btnsearch
             // 
             btnsearch.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btnsearch.Location = new Point(357, 21);
+            btnsearch.Location = new Point(403, 21);
             btnsearch.Name = "btnsearch";
             btnsearch.Size = new Size(129, 53);
             btnsearch.TabIndex = 1;
@@ -66,7 +68,7 @@
             // btndelete
             // 
             btndelete.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btndelete.Location = new Point(357, 102);
+            btndelete.Location = new Point(403, 110);
             btndelete.Name = "btndelete";
             btndelete.Size = new Size(129, 53);
             btndelete.TabIndex = 3;
@@ -74,11 +76,23 @@
             btndelete.UseVisualStyleBackColor = true;
             btndelete.Click += btndelete_Click;
             // 
+            // btnDetail
+            // 
+            btnDetail.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            btnDetail.Location = new Point(403, 190);
+            btnDetail.Name = "btnDetail";
+            btnDetail.Size = new Size(129, 53);
+            btnDetail.TabIndex = 4;
+            btnDetail.Text = "نمایش جزئیات";
+            btnDetail.UseVisualStyleBackColor = true;
+            btnDetail.Click += btnDetail_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(507, 570);
+            ClientSize = new Size(544, 638);
+            Controls.Add(btnDetail);
             Controls.Add(btndelete);
             Controls.Add(txtsearchkey);
             Controls.Add(btnsearch);
@@ -102,5 +116,6 @@
         private Button btnsearch;
         private TextBox txtsearchkey;
         private Button btndelete;
+        private Button btnDetail;
     }
 }
