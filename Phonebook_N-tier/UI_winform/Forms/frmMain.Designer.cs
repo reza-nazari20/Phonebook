@@ -31,6 +31,7 @@
             dataGridView1 = new DataGridView();
             btnsearch = new Button();
             txtsearchkey = new TextBox();
+            btndelete = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // btnsearch
             // 
             btnsearch.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            btnsearch.Location = new Point(355, 61);
+            btnsearch.Location = new Point(357, 21);
             btnsearch.Name = "btnsearch";
             btnsearch.Size = new Size(129, 53);
             btnsearch.TabIndex = 1;
@@ -57,16 +58,28 @@
             // 
             // txtsearchkey
             // 
-            txtsearchkey.Location = new Point(38, 70);
+            txtsearchkey.Location = new Point(42, 30);
             txtsearchkey.Name = "txtsearchkey";
             txtsearchkey.Size = new Size(265, 37);
             txtsearchkey.TabIndex = 2;
+            // 
+            // btndelete
+            // 
+            btndelete.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            btndelete.Location = new Point(357, 102);
+            btndelete.Name = "btndelete";
+            btndelete.Size = new Size(129, 53);
+            btndelete.TabIndex = 3;
+            btndelete.Text = "حذف";
+            btndelete.UseVisualStyleBackColor = true;
+            btndelete.Click += btndelete_Click;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(507, 570);
+            Controls.Add(btndelete);
             Controls.Add(txtsearchkey);
             Controls.Add(btnsearch);
             Controls.Add(dataGridView1);
@@ -88,5 +101,6 @@
         private DataGridView dataGridView1;
         private Button btnsearch;
         private TextBox txtsearchkey;
+        private Button btndelete;
     }
 }

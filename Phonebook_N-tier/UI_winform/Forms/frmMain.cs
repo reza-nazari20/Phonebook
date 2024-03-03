@@ -1,14 +1,5 @@
 ﻿using BLL.Dto;
 using BLL.Services;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace UI_winform.Forms
 {
@@ -52,6 +43,22 @@ namespace UI_winform.Forms
             SettingGridveiw(listContact);
 
             this.Cursor = Cursors.Default;
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            var result = contactService.DeleteContact(id);
+
+            if (result.IsSuccess == true)
+            {
+                MessageBox.Show(result.Message, "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                frmMain_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show(result.Message, "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

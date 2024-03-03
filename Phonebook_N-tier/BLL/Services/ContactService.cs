@@ -21,6 +21,11 @@ namespace BLL.Services
             return contacts;
         }
 
+        /// <summary>
+        /// جستوجو
+        /// </summary>
+        /// <param name="SearchKey"></param>
+        /// <returns></returns>
         public List<ContactListDto> SearchContact(string SearchKey)
         {
             var ContactQuery = database.Contacts.AsQueryable();
@@ -47,6 +52,26 @@ namespace BLL.Services
                 Id = p.ID,
             }).ToList();
             return daata;
+        }
+
+        public ResultDto DeleteContact(int id)
+        {
+            var contact = database.Contacts.Find(id);
+            if (contact != null)
+            {
+                database.Remove(contact);
+                database.SaveChanges();
+                return new ResultDto()
+                {
+                    IsSuccess=true,
+                    Message="مخاطب با موفقیت حذف شد"
+                };
+            }
+            return new ResultDto()
+            {
+                IsSuccess = false,
+                Message="مخاطب با موفقیت حذف نشد"
+            };
         }
     }
 }
