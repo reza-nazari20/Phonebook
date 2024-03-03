@@ -1,10 +1,6 @@
 ﻿using BLL.Dto;
 using DAL.DataBase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BLL.Services
 {
@@ -18,11 +14,39 @@ namespace BLL.Services
         {
             var contacts = database.Contacts.Select(p => new ContactListDto()
             {
-                Fullname=$"{p.Name} {p.Lastname}",
-                Phonenumber=p.PhoneNumber,
-                Id=p.ID,
+                Fullname = $"{p.Name} {p.Lastname}",
+                Phonenumber = p.PhoneNumber,
+                Id = p.ID,
             }).ToList();
             return contacts;
+        }
+
+        public List<ContactListDto> SearchContact(string SearchKey)
+        {
+            var ContactQuery = database.Contacts.AsQueryable();
+
+            if (!string.IsNullOrEmpty(SearchKey))
+            {
+                ContactQuery = ContactQuery.Where(
+                    p =>
+                    p.Name.Contains(SearchKey)
+                    ||
+                    p.Lastname.Contains(SearchKey)
+                    ||
+                    p.PhoneNumber.Contains(SearchKey)
+                    ||
+                    p.Company.Contains(SearchKey)
+                    );
+
+            }
+
+            var daata = ContactQuery.Select(p => new ContactListDto
+            {
+                Fullname = $"{p.Name} {p.Lastname}",
+                Phonenumber = p.PhoneNumber,
+                Id = p.ID,
+            }).ToList();
+            return daata;
         }
     }
 }
